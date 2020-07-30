@@ -1,0 +1,12 @@
+                            {{#children}}
+                            <div class="comments__item">
+                                <div class="comments__header">
+                                    <b class="author"> {{author}} </b>
+                                    <span class="date"> {{created_at}} </span>
+                                </div>
+                                <div class="comments__body">
+                                    <div class="comments__text"> {{{text}}} </div>
+                                        {{>child}}
+                                </div>
+                            </div>
+                            {{/children}}

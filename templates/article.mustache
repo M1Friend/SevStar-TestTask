@@ -1,0 +1,22 @@
+                <div class="row">
+                    <article class="col-12 article">
+                        <h2> {{title}} </h2>
+                        {{{text}}}
+                        <div class="article-footer">
+                            <div class="d-inline mr-2" data-toggle="tooltip" title="Upvotes">
+                                <i class="far fa-thumbs-up"></i> {{points}}
+                            </div>
+                            {{#url}}
+                            <a href="{{url}}" class="d-inline mr-2 link-dark text-uppercase" data-toggle="tooltip" title="Read on source">
+                                <i class="fas fa-location-arrow"></i> src
+                            </a>
+                            {{/url}}
+                        </div>
+                    </article>
+                </div>
+                <div class="row mt-5 border-top">
+                    <div class="col-12 comments__wrapper">
+                        {{>child}}
+                        {{! Рекурсивный вызов шаблона с комментами. Создаём вложенную структуру (лесенку комментов) }}
+                    </div>
+                </div>

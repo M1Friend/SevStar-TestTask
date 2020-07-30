@@ -1,0 +1,82 @@
+p {
+    font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+    p {
+        font-size: 16px;
+    }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+    z-index: 999999;
+}
+
+main { 
+    position: relative;
+    padding: 40px 0;
+}
+
+.content-wrapper {
+    display: none;
+}
+
+.content-wrapper.active {
+    display: block;
+}
+
+.preloader {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.preloader.active {
+    display: flex;
+}
+
+.comments__item {
+    padding-top: 15px;
+    margin-left: 1em;
+}
+
+@media screen and (min-width: 768px) {
+    .comments__item {
+        padding-top: 15px;
+        margin-left: 3em;
+    }
+}
+
+.comments__text {
+    border-bottom: 1px solid #dedede;
+}
+
+.comments__text a {
+    display: inline-block;
+    width: 170px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: bottom;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+    .comments__text a {
+        width: 250px;
+    }
+}
+
+.pagination .page-item {
+    margin: 15px 0 0;
+}

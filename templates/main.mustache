@@ -1,0 +1,32 @@
+
+                <div class="row row-cols-1 row-cols-lg-3 g-4">
+                
+                    {{#hits}}
+                    <div class="col">
+                        <div class="card bg-dark text-light h-100">
+                            <div class="card-header"> {{author}} </div>
+                            <div class="card-body">
+                                <h3 class="card-text"> {{title}} </h3>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-inline mr-2" data-toggle="tooltip" title="Upvotes">
+                                    <i class="far fa-thumbs-up"></i> {{points}}
+                                </div>
+                                <a href="?articleID={{objectID}}" class="d-inline mr-2 link-light history-link" data-toggle="tooltip" title="Comments">
+                                    <i class="far fa-comment"></i> {{num_comments}}
+                                </a>
+                                {{#url}}
+                                <a href="{{url}}" target="_blank" class="d-inline mr-2 link-light text-uppercase" data-toggle="tooltip" title="Read on source">
+                                    <i class="fas fa-location-arrow"></i> src
+                                </a>
+                                {{/url}}
+                            </div>
+                        </div>
+                    </div>
+                    {{/hits}}
+                    
+                </div>
+                
+                <div class="row pagination">
+                    {{{pagination}}}
+                </div>
